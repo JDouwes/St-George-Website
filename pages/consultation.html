@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation | Lyme Treatment Germany</title>
+  <meta name="description" content="Request a free case review for Lyme disease treatment in Germany. Our medical team reviews your case within 2 business days. No commitment required.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book a Consultation | Lyme Treatment Germany">
+  <meta property="og:description" content="Request a free case review for advanced Lyme disease treatment in Germany. Submit your information and receive a response within 2 business days.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lyme-treatment-germany.com/consultation/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/design-system.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* --- Consultation layout --- */
+    .consultation-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: var(--space-8);
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .consultation-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- Form step visibility --- */
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    /* --- Step indicator enhancements --- */
+    .steps {
+      justify-content: flex-start;
+    }
+
+    .step__label {
+      display: inline;
+      font-family: var(--font-ui);
+      font-size: 13px;
+      color: var(--color-pewter);
+      font-weight: 500;
+    }
+
+    .step--active .step__label {
+      color: var(--color-primary);
+    }
+
+    .step--complete .step__label {
+      color: var(--color-charcoal);
+    }
+
+    @media (max-width: 768px) {
+      .step__label {
+        display: none;
+      }
+    }
+
+    /* --- Form actions row --- */
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+      padding-top: var(--space-5);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .form-actions--right {
+      justify-content: flex-end;
+    }
+
+    /* --- Checkbox / radio groups --- */
+    .checkbox-group,
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+    }
+
+    @media (max-width: 480px) {
+      .checkbox-group,
+      .radio-group {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .checkbox-item,
+    .radio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+      font-family: var(--font-ui);
+      font-size: 15px;
+      color: var(--color-charcoal);
+    }
+
+    .checkbox-item:hover,
+    .radio-item:hover {
+      border-color: var(--color-primary);
+      background: var(--color-primary-light);
+    }
+
+    .checkbox-item input,
+    .radio-item input {
+      margin-top: 2px;
+      accent-color: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    /* --- Consent checkbox --- */
+    .consent-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-primary-light);
+      border-radius: var(--radius-md);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-charcoal);
+    }
+
+    .consent-item input {
+      margin-top: 3px;
+      accent-color: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    .consent-item a {
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    /* --- Trust sidebar --- */
+    .trust-sidebar {
+      position: sticky;
+      top: 88px;
+    }
+
+    .trust-sidebar__section {
+      margin-bottom: var(--space-6);
+    }
+
+    .trust-sidebar__heading {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-4);
+    }
+
+    /* --- What happens next steps --- */
+    .next-steps__item {
+      display: flex;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+    }
+
+    .next-steps__number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .next-steps__text {
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-slate);
+    }
+
+    .next-steps__text strong {
+      display: block;
+      color: var(--color-charcoal);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* --- Team placeholder --- */
+    .team-placeholder {
+      display: flex;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+
+    .team-placeholder__avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      border: 2px solid var(--color-primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    /* --- Contact box --- */
+    .contact-box {
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-4) var(--space-5);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      color: var(--color-slate);
+      line-height: 1.6;
+    }
+
+    .contact-box strong {
+      display: block;
+      margin-bottom: var(--space-2);
+    }
+
+    .contact-box a {
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    /* --- Review summary --- */
+    .review-summary {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+      margin-bottom: var(--space-5);
+    }
+
+    .review-summary__section {
+      margin-bottom: var(--space-5);
+      padding-bottom: var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .review-summary__section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .review-summary__heading {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-3);
+    }
+
+    .review-summary__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-4);
+      padding: var(--space-2) 0;
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .review-summary__label {
+      color: var(--color-pewter);
+      flex-shrink: 0;
+      min-width: 140px;
+    }
+
+    .review-summary__value {
+      color: var(--color-charcoal);
+      font-weight: 500;
+      text-align: right;
+    }
+
+    .review-summary__edit {
+      font-family: var(--font-ui);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-primary);
+      cursor: pointer;
+      background: none;
+      border: none;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      float: right;
+    }
+
+    /* --- Process timeline --- */
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5);
+      position: relative;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: calc(12.5% + 16px);
+      right: calc(12.5% + 16px);
+      height: 2px;
+      background: var(--color-border);
+    }
+
+    @media (max-width: 768px) {
+      .process-timeline {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+    }
+
+    .process-timeline__step {
+      text-align: center;
+      position: relative;
+    }
+
+    .process-timeline__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-timeline__title {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      margin-bottom: var(--space-2);
+    }
+
+    .process-timeline__text {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-slate);
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .process-timeline__step {
+        text-align: left;
+        display: flex;
+        gap: var(--space-4);
+        align-items: flex-start;
+      }
+
+      .process-timeline__icon {
+        margin: 0;
+        flex-shrink: 0;
+      }
+
+      .process-timeline__text {
+        max-width: none;
+      }
+    }
+
+    /* --- Emergency disclaimer --- */
+    .emergency-disclaimer {
+      background: #FEF2F2;
+      border: 1px solid var(--color-error);
+      border-radius: var(--radius-md);
+      padding: var(--space-4) var(--space-5);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--color-charcoal);
+      text-align: center;
+    }
+
+    .emergency-disclaimer strong {
+      color: var(--color-error);
+    }
+
+    /* --- Assurance bar --- */
+    .assurance-bar {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-7);
+      flex-wrap: wrap;
+      margin-top: var(--space-5);
+    }
+
+    .assurance-bar__item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      color: var(--color-slate);
+    }
+
+    .assurance-bar__icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Book a Consultation — Lyme Treatment Germany",
+    "description": "Request a free case review for advanced Lyme disease treatment in Germany. Our medical team reviews your case within 2 business days.",
+    "url": "https://lyme-treatment-germany.com/consultation/",
+    "inLanguage": "en",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Lyme Disease"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lyme Treatment Germany",
+      "url": "https://lyme-treatment-germany.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="/" class="site-header__logo" aria-label="Lyme Treatment Germany — Home">
+        Lyme Treatment <span>Germany</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__dropdown">
+            <a href="/lyme-disease-symptoms/" class="nav__link" aria-haspopup="true">Lyme Disease</a>
+            <div class="nav__dropdown-menu" role="menu">
+              <a href="/knowledge/what-is-lyme-disease/" class="nav__dropdown-item" role="menuitem">What is Lyme disease</a>
+              <a href="/lyme-disease-symptoms/" class="nav__dropdown-item" role="menuitem">Symptoms guide</a>
+              <a href="/knowledge/chronic-lyme-disease/" class="nav__dropdown-item" role="menuitem">Chronic Lyme disease</a>
+              <a href="/knowledge/lyme-testing-diagnosis/" class="nav__dropdown-item" role="menuitem">Testing and diagnosis</a>
+              <a href="/knowledge/lyme-co-infections/" class="nav__dropdown-item" role="menuitem">Co-infections</a>
+              <a href="/symptom-assessment/" class="nav__dropdown-item" role="menuitem">Symptom assessment</a>
+            </div>
+          </li>
+          <li class="nav__dropdown">
+            <a href="/lyme-disease-treatment/" class="nav__link" aria-haspopup="true">Treatments</a>
+            <div class="nav__dropdown-menu" role="menu">
+              <a href="/hyperthermia-lyme-disease/" class="nav__dropdown-item" role="menuitem">Hyperthermia for Lyme</a>
+              <a href="/lyme-disease-treatment/antibiotics/" class="nav__dropdown-item" role="menuitem">Antibiotic treatment</a>
+              <a href="/lyme-disease-treatment/apheresis/" class="nav__dropdown-item" role="menuitem">Apheresis</a>
+              <a href="/lyme-disease-treatment/integrative-approach/" class="nav__dropdown-item" role="menuitem">Integrative approach</a>
+              <a href="/hyperthermia-lyme-disease/results-expectations/" class="nav__dropdown-item" role="menuitem">Results and expectations</a>
+            </div>
+          </li>
+          <li>
+            <a href="/compare-treatments/" class="nav__link">Compare</a>
+          </li>
+          <li class="nav__dropdown">
+            <a href="/international-patients/" class="nav__link" aria-haspopup="true">For Patients</a>
+            <div class="nav__dropdown-menu" role="menu">
+              <a href="/international-patients/" class="nav__dropdown-item" role="menuitem">International patients</a>
+              <a href="/patient-journey/first-consultation/" class="nav__dropdown-item" role="menuitem">Your first consultation</a>
+              <a href="/patient-journey/during-treatment/" class="nav__dropdown-item" role="menuitem">During treatment</a>
+              <a href="/patient-journey/preparing-for-germany/" class="nav__dropdown-item" role="menuitem">Preparing for Germany</a>
+              <a href="/patient-journey/insurance-payment/" class="nav__dropdown-item" role="menuitem">Insurance and payment</a>
+            </div>
+          </li>
+          <li>
+            <a href="/knowledge/" class="nav__link">Knowledge</a>
+          </li>
+        </ul>
+
+        <a href="/consultation/" class="btn btn--primary btn--sm">Book consultation</a>
+
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero hero--page">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb__separator">/</span>
+        <span>Consultation</span>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title" style="color: var(--color-charcoal);">Request a case review</h1>
+        <p class="hero__subtitle" style="color: var(--color-slate); opacity: 1;">Submit your information and our medical team will review your case within 2 business days. There is no commitment &mdash; a case review helps both you and our team understand whether this treatment approach is right for your situation.</p>
+        <div class="assurance-bar">
+          <div class="assurance-bar__item">
+            <span class="assurance-bar__icon">&check;</span>
+            No commitment required
+          </div>
+          <div class="assurance-bar__item">
+            <span class="assurance-bar__icon">&check;</span>
+            Response within 2 business days
+          </div>
+          <div class="assurance-bar__item">
+            <span class="assurance-bar__icon">&check;</span>
+            Your data is kept confidential
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONSULTATION FORM + TRUST SIDEBAR
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="consultation-layout">
+
+        <!-- ========== LEFT: Multi-step form ========== -->
+        <div>
+          <!-- Step indicator -->
+          <div class="steps" id="form-steps">
+            <div class="step step--active">
+              <span class="step__dot">1</span>
+              <span class="step__label">About You</span>
+            </div>
+            <span class="step__line"></span>
+            <div class="step">
+              <span class="step__dot">2</span>
+              <span class="step__label">Your Condition</span>
+            </div>
+            <span class="step__line"></span>
+            <div class="step">
+              <span class="step__dot">3</span>
+              <span class="step__label">Treatment History</span>
+            </div>
+            <span class="step__line"></span>
+            <div class="step">
+              <span class="step__dot">4</span>
+              <span class="step__label">Review &amp; Submit</span>
+            </div>
+          </div>
+
+          <form id="consultation-form" action="#" method="POST" novalidate>
+
+            <!-- ===== STEP 1: About You ===== -->
+            <div class="form-step active" data-form-step="0">
+              <h2 style="margin-bottom: var(--space-3);">About you</h2>
+              <p style="margin-bottom: var(--space-6); color: var(--color-slate); font-size: 16px;">We need a few details to get in touch with you. Your information is kept strictly confidential.</p>
+
+              <div class="form-group">
+                <label class="form-label" for="full-name">Full name (required)</label>
+                <input type="text" id="full-name" name="full_name" class="form-input" required autocomplete="name" placeholder="Your full name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email address (required)</label>
+                <input type="email" id="email" name="email" class="form-input" required autocomplete="email" placeholder="you@example.com">
+                <p class="form-helper">We will use this email to send your case review response.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone number <span class="optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="+1 (555) 123-4567">
+                <p class="form-helper">Include country code if outside Germany. We may use this for scheduling a consultation.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="country">Country of residence (required)</label>
+                <select id="country" name="country" class="form-select" required>
+                  <option value="" disabled selected>Select your country</option>
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="CA">Canada</option>
+                  <option value="AU">Australia</option>
+                  <option value="DE">Germany</option>
+                  <option value="AT">Austria</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="IE">Ireland</option>
+                  <option value="NZ">New Zealand</option>
+                  <option value="SE">Sweden</option>
+                  <option value="NO">Norway</option>
+                  <option value="DK">Denmark</option>
+                  <option value="FI">Finland</option>
+                  <option value="FR">France</option>
+                  <option value="ES">Spain</option>
+                  <option value="IT">Italy</option>
+                  <option value="BE">Belgium</option>
+                  <option value="PL">Poland</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="SG">Singapore</option>
+                  <option value="JP">Japan</option>
+                  <option value="KR">South Korea</option>
+                  <option value="BR">Brazil</option>
+                  <option value="MX">Mexico</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="referral-source">How did you hear about us? <span class="optional">(optional)</span></label>
+                <select id="referral-source" name="referral_source" class="form-select">
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="google">Google / search engine</option>
+                  <option value="social-media">Social media</option>
+                  <option value="doctor-referral">Doctor or healthcare provider</option>
+                  <option value="patient-referral">Another patient</option>
+                  <option value="lyme-community">Lyme disease community or forum</option>
+                  <option value="article-blog">Article or blog</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-actions form-actions--right">
+                <button type="button" class="btn btn--primary" data-next-step="1">Continue to Your Condition</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 2: Your Condition ===== -->
+            <div class="form-step" data-form-step="1">
+              <h2 style="margin-bottom: var(--space-3);">Your condition</h2>
+              <p style="margin-bottom: var(--space-6); color: var(--color-slate); font-size: 16px;">Help us understand your symptoms and diagnosis history. This information helps our medical team assess your case more accurately.</p>
+
+              <div class="form-group">
+                <label class="form-label">Primary symptoms (required)</label>
+                <p class="form-helper" style="margin-bottom: var(--space-3);">Select all that apply to your current experience.</p>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="fatigue">
+                    Fatigue
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="joint-pain">
+                    Joint pain
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="brain-fog">
+                    Brain fog
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="nerve-pain">
+                    Nerve pain
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="headaches">
+                    Headaches
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="heart-symptoms">
+                    Heart symptoms
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="sleep-problems">
+                    Sleep problems
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="symptoms[]" value="other">
+                    Other
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="symptom-duration">Duration of symptoms (required)</label>
+                <select id="symptom-duration" name="symptom_duration" class="form-select" required>
+                  <option value="" disabled selected>How long have you experienced symptoms?</option>
+                  <option value="less-than-6-months">Less than 6 months</option>
+                  <option value="6-12-months">6 to 12 months</option>
+                  <option value="1-3-years">1 to 3 years</option>
+                  <option value="3-5-years">3 to 5 years</option>
+                  <option value="5-plus-years">More than 5 years</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="current-diagnosis">Current diagnosis <span class="optional">(optional)</span></label>
+                <input type="text" id="current-diagnosis" name="current_diagnosis" class="form-input" placeholder="e.g., Lyme disease, fibromyalgia, CFS, undiagnosed">
+                <p class="form-helper">If you have received a formal diagnosis, share it here. It is also fine if you have not been diagnosed.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="lyme-testing">Previous Lyme testing (required)</label>
+                <select id="lyme-testing" name="lyme_testing" class="form-select" required>
+                  <option value="" disabled selected>Have you been tested for Lyme disease?</option>
+                  <option value="yes-positive">Yes &mdash; tested positive</option>
+                  <option value="yes-negative">Yes &mdash; tested negative</option>
+                  <option value="yes-inconclusive">Yes &mdash; results were inconclusive</option>
+                  <option value="no">No &mdash; I have not been tested</option>
+                  <option value="unsure">I am not sure</option>
+                </select>
+                <p class="form-helper">Standard Lyme tests miss many cases. A negative test does not rule out Lyme disease.</p>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn--secondary" data-prev-step="0">&larr; Back</button>
+                <button type="button" class="btn btn--primary" data-next-step="2">Continue to Treatment History</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 3: Treatment History ===== -->
+            <div class="form-step" data-form-step="2">
+              <h2 style="margin-bottom: var(--space-3);">Treatment history</h2>
+              <p style="margin-bottom: var(--space-6); color: var(--color-slate); font-size: 16px;">Understanding what you have already tried helps our team recommend the most appropriate next steps for your case.</p>
+
+              <div class="form-group">
+                <label class="form-label">Treatments tried <span class="optional">(optional)</span></label>
+                <p class="form-helper" style="margin-bottom: var(--space-3);">Select all that apply.</p>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="treatments_tried[]" value="antibiotics">
+                    Antibiotics
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="treatments_tried[]" value="herbal-protocols">
+                    Herbal protocols
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="treatments_tried[]" value="functional-medicine">
+                    Functional medicine
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="treatments_tried[]" value="hyperthermia">
+                    Hyperthermia
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="treatments_tried[]" value="none">
+                    None
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="treatments_tried[]" value="other">
+                    Other
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="current-medications">Current medications <span class="optional">(optional)</span></label>
+                <textarea id="current-medications" name="current_medications" class="form-textarea" placeholder="List any medications, supplements, or protocols you are currently taking."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="other-conditions">Other health conditions <span class="optional">(optional)</span></label>
+                <textarea id="other-conditions" name="other_conditions" class="form-textarea" placeholder="Any other diagnoses or health conditions our team should know about."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="hoped-outcome">What outcome are you hoping for? <span class="optional">(optional)</span></label>
+                <textarea id="hoped-outcome" name="hoped_outcome" class="form-textarea" placeholder="Describe what a good outcome would look like for you. There are no wrong answers."></textarea>
+                <p class="form-helper">This helps us understand your expectations and goals so we can provide an honest assessment.</p>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn--secondary" data-prev-step="1">&larr; Back</button>
+                <button type="button" class="btn btn--primary" data-next-step="3">Continue to Review</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 4: Review & Submit ===== -->
+            <div class="form-step" data-form-step="3">
+              <h2 style="margin-bottom: var(--space-3);">Review your information</h2>
+              <p style="margin-bottom: var(--space-6); color: var(--color-slate); font-size: 16px;">Please review the details below before submitting. You can go back to any step to make changes.</p>
+
+              <!-- Summary populated by JavaScript -->
+              <div class="review-summary" id="review-summary">
+                <div class="review-summary__section">
+                  <div class="review-summary__heading">
+                    About You
+                    <button type="button" class="review-summary__edit" data-goto-step="0">Edit</button>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Name</span>
+                    <span class="review-summary__value" id="review-name">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Email</span>
+                    <span class="review-summary__value" id="review-email">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Phone</span>
+                    <span class="review-summary__value" id="review-phone">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Country</span>
+                    <span class="review-summary__value" id="review-country">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Referral source</span>
+                    <span class="review-summary__value" id="review-referral">&mdash;</span>
+                  </div>
+                </div>
+
+                <div class="review-summary__section">
+                  <div class="review-summary__heading">
+                    Your Condition
+                    <button type="button" class="review-summary__edit" data-goto-step="1">Edit</button>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Symptoms</span>
+                    <span class="review-summary__value" id="review-symptoms">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Duration</span>
+                    <span class="review-summary__value" id="review-duration">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Current diagnosis</span>
+                    <span class="review-summary__value" id="review-diagnosis">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Lyme testing</span>
+                    <span class="review-summary__value" id="review-testing">&mdash;</span>
+                  </div>
+                </div>
+
+                <div class="review-summary__section">
+                  <div class="review-summary__heading">
+                    Treatment History
+                    <button type="button" class="review-summary__edit" data-goto-step="2">Edit</button>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Treatments tried</span>
+                    <span class="review-summary__value" id="review-treatments">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Medications</span>
+                    <span class="review-summary__value" id="review-medications">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Other conditions</span>
+                    <span class="review-summary__value" id="review-other-conditions">&mdash;</span>
+                  </div>
+                  <div class="review-summary__row">
+                    <span class="review-summary__label">Hoped outcome</span>
+                    <span class="review-summary__value" id="review-outcome">&mdash;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Consent -->
+              <div class="form-group">
+                <label class="consent-item">
+                  <input type="checkbox" id="consent-review" name="consent_review" required>
+                  <span>I understand that this case review is not a medical diagnosis. I agree to the <a href="/legal/privacy-policy/">privacy policy</a> and consent to my data being processed for the purpose of reviewing my case. My information will be kept confidential and handled in accordance with GDPR.</span>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn--secondary" data-prev-step="2">&larr; Back</button>
+                <button type="submit" class="btn btn--primary btn--lg" id="submit-btn">Submit case review request</button>
+              </div>
+
+              <p class="form-helper" style="margin-top: var(--space-4); text-align: center;">By submitting, you agree to our privacy policy. We will never share your data with third parties.</p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- ========== RIGHT: Trust sidebar ========== -->
+        <aside class="trust-sidebar">
+
+          <!-- Your medical team -->
+          <div class="trust-sidebar__section">
+            <div class="trust-sidebar__heading">Your case is reviewed by physicians</div>
+            <div class="team-placeholder">
+              <div class="team-placeholder__avatar">FD</div>
+              <div class="team-placeholder__avatar">KS</div>
+              <div class="team-placeholder__avatar">MH</div>
+            </div>
+            <p style="font-family: var(--font-ui); font-size: 14px; line-height: 1.6; color: var(--color-slate); margin-bottom: 0;">Every case review is assessed by our medical team with 30+ years of experience treating tick-borne disease. You will not receive a generic response.</p>
+          </div>
+
+          <!-- What happens next -->
+          <div class="trust-sidebar__section">
+            <div class="trust-sidebar__heading">What happens next</div>
+            <div class="next-steps__item">
+              <span class="next-steps__number">1</span>
+              <div class="next-steps__text">
+                <strong>We review your case</strong>
+                A physician reviews your symptoms, history, and testing within 2 business days.
+              </div>
+            </div>
+            <div class="next-steps__item">
+              <span class="next-steps__number">2</span>
+              <div class="next-steps__text">
+                <strong>You receive a response</strong>
+                We send a personal email with an initial assessment and recommended next steps.
+              </div>
+            </div>
+            <div class="next-steps__item">
+              <span class="next-steps__number">3</span>
+              <div class="next-steps__text">
+                <strong>Video consultation</strong>
+                If appropriate, we invite you to schedule a video consultation with a specialist physician.
+              </div>
+            </div>
+            <div class="next-steps__item">
+              <span class="next-steps__number">4</span>
+              <div class="next-steps__text">
+                <strong>Personalized treatment plan</strong>
+                If you choose to proceed, we develop a treatment plan tailored to your case.
+              </div>
+            </div>
+          </div>
+
+          <!-- Questions? -->
+          <div class="trust-sidebar__section">
+            <div class="contact-box">
+              <strong>Questions before submitting?</strong>
+              <p style="margin-bottom: var(--space-2);">Our patient coordinator is available to help. No question is too small.</p>
+              <p style="margin-bottom: var(--space-1);">Email: <a href="mailto:info@lyme-treatment-germany.com">info@lyme-treatment-germany.com</a></p>
+              <p style="margin-bottom: 0;">Phone: <a href="tel:+498061398-0">+49 8061 398-0</a></p>
+            </div>
+          </div>
+
+          <!-- Privacy assurance -->
+          <div class="trust-sidebar__section" style="margin-bottom: 0;">
+            <div class="disclaimer">
+              <strong style="color: var(--color-charcoal); font-size: 13px;">Your privacy is protected</strong><br>
+              Your information is encrypted, stored securely, and never shared with third parties. We comply with GDPR and German data protection law.
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHAT TO EXPECT — Process timeline
+       ============================================================ -->
+  <section class="section section--light">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--space-4);">What to expect after you submit</h2>
+      <p style="text-align: center; max-width: 560px; margin: 0 auto var(--space-7);">We designed our process to be thorough, transparent, and respectful of your time. Here is exactly what happens after you submit your case review.</p>
+
+      <div class="process-timeline">
+        <div class="process-timeline__step">
+          <div class="process-timeline__icon">1</div>
+          <div>
+            <div class="process-timeline__title">Case review</div>
+            <p class="process-timeline__text">A physician reviews your submitted information &mdash; your symptoms, testing history, and treatments tried &mdash; to assess whether our treatment approach may be appropriate for your case.</p>
+          </div>
+        </div>
+        <div class="process-timeline__step">
+          <div class="process-timeline__icon">2</div>
+          <div>
+            <div class="process-timeline__title">Personal response</div>
+            <p class="process-timeline__text">Within 2 business days, you receive a personal email from our team with an initial assessment and recommended next steps. This is not an automated reply.</p>
+          </div>
+        </div>
+        <div class="process-timeline__step">
+          <div class="process-timeline__icon">3</div>
+          <div>
+            <div class="process-timeline__title">Video consultation</div>
+            <p class="process-timeline__text">If a consultation is appropriate, we schedule a video call with a Lyme specialist physician to discuss your case in detail, answer your questions, and outline treatment options.</p>
+          </div>
+        </div>
+        <div class="process-timeline__step">
+          <div class="process-timeline__icon">4</div>
+          <div>
+            <div class="process-timeline__title">Treatment plan</div>
+            <p class="process-timeline__text">If you choose to proceed, we develop a personalized treatment plan with a clear timeline, cost estimate, and practical guidance for traveling to Germany.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ — Consultation Process
+       ============================================================ -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2 style="text-align: center; margin-bottom: var(--space-7);">Questions about the consultation process</h2>
+      <div class="faq">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">Is there a cost for the case review?</button>
+          <div class="faq__answer" aria-hidden="true">
+            <p>No. The initial case review is provided at no cost and with no commitment. Our medical team reviews your information to determine whether our treatment approach may be appropriate for your situation. If a video consultation is recommended as a next step, we will discuss any associated costs transparently before scheduling.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">How long does it take to receive a response?</button>
+          <div class="faq__answer" aria-hidden="true">
+            <p>You will receive a personal response from our medical team within 2 business days. During peak periods, it may take slightly longer, but we will always acknowledge your submission promptly. Our responses are written by our clinical team &mdash; they are not automated replies.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">What if I am not a suitable candidate for treatment?</button>
+          <div class="faq__answer" aria-hidden="true">
+            <p>If our medical team determines that our treatment approach is not the best option for your case, we will tell you honestly. Where possible, we will suggest alternative directions or resources that may be more appropriate. We believe that helping you find the right path &mdash; even if it does not lead to us &mdash; is the right thing to do.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">Can a caregiver or family member submit this form on my behalf?</button>
+          <div class="faq__answer" aria-hidden="true">
+            <p>Yes. If you are a caregiver, family member, or advocate submitting on behalf of someone with Lyme disease, please include the patient's information in the form. You can note in the treatment history section that you are submitting on their behalf. Our team will follow up with whichever contact information you provide.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">What information should I have ready before filling out this form?</button>
+          <div class="faq__answer" aria-hidden="true">
+            <p>Having the following information available will help us provide a more thorough assessment: your primary symptoms and how long you have experienced them, any Lyme disease test results, a list of treatments you have already tried, and any other diagnoses you have received. However, you do not need all of this to submit &mdash; share what you can, and we can gather additional details during a follow-up consultation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EMERGENCY DISCLAIMER
+       ============================================================ -->
+  <section style="padding: var(--space-6) 0 var(--space-8);">
+    <div class="container container--narrow">
+      <div class="emergency-disclaimer">
+        <strong>This is not an emergency service.</strong><br>
+        If you are experiencing a medical emergency, contact your local emergency services immediately. In Germany, dial 112. In the United States, dial 911. In the United Kingdom, dial 999. This case review is for non-urgent inquiries only.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__heading">Lyme Treatment Germany</div>
+          <p class="site-footer__about">An educational platform for international patients researching advanced Lyme disease treatment in Germany. Built on 30+ years of clinical experience treating tick-borne disease.</p>
+        </div>
+        <div>
+          <div class="site-footer__heading">Treatment</div>
+          <a href="/hyperthermia-lyme-disease/" class="site-footer__link">Hyperthermia</a>
+          <a href="/lyme-disease-treatment/" class="site-footer__link">Treatment options</a>
+          <a href="/compare-treatments/" class="site-footer__link">Compare treatments</a>
+          <a href="/lyme-disease-treatment/integrative-approach/" class="site-footer__link">Integrative approach</a>
+          <a href="/hyperthermia-lyme-disease/results-expectations/" class="site-footer__link">Results and expectations</a>
+        </div>
+        <div>
+          <div class="site-footer__heading">For patients</div>
+          <a href="/symptom-assessment/" class="site-footer__link">Symptom assessment</a>
+          <a href="/consultation/" class="site-footer__link">Book consultation</a>
+          <a href="/international-patients/" class="site-footer__link">International patients</a>
+          <a href="/patient-journey/first-consultation/" class="site-footer__link">Your first consultation</a>
+          <a href="/patient-journey/insurance-payment/" class="site-footer__link">Insurance and payment</a>
+        </div>
+        <div>
+          <div class="site-footer__heading">Learn</div>
+          <a href="/knowledge/" class="site-footer__link">Knowledge base</a>
+          <a href="/lyme-disease-symptoms/" class="site-footer__link">Symptoms guide</a>
+          <a href="/knowledge/what-is-lyme-disease/" class="site-footer__link">What is Lyme disease</a>
+          <a href="/about/" class="site-footer__link">About our approach</a>
+          <a href="/resources/lyme-treatment-guide/" class="site-footer__link">Free treatment guide</a>
+        </div>
+      </div>
+
+      <div class="site-footer__disclosure">
+        Lyme Treatment Germany is an educational resource created in partnership with Klinik St. Georg (St. George Hospital), a private integrative medicine hospital in Bad Aibling, Germany. Our medical content is informed by St. George Hospital's clinical experience treating Lyme disease. When we recommend St. George Hospital as a treatment option, we do so based on published evaluation criteria and disclose this partnership clearly. <a href="/about/partnership-disclosure/" style="color: rgba(255,255,255,0.7);">Read our editorial policy.</a>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 Lyme Treatment Germany. All rights reserved.</span>
+        <div style="display: flex; gap: var(--space-5);">
+          <a href="/legal/medical-disclaimer/" class="site-footer__link" style="padding: 0;">Medical disclaimer</a>
+          <a href="/legal/privacy-policy/" class="site-footer__link" style="padding: 0;">Privacy policy</a>
+          <a href="/legal/terms/" class="site-footer__link" style="padding: 0;">Terms</a>
+          <a href="/legal/impressum/" class="site-footer__link" style="padding: 0;">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main site JS (includes header, FAQ, multi-step form logic) -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Consultation-specific JS -->
+  <script>
+  (function () {
+    'use strict';
+
+    var form = document.getElementById('consultation-form');
+    var formSteps = document.querySelectorAll('.form-step');
+    var stepIndicators = document.querySelectorAll('#form-steps .step');
+    var stepLines = document.querySelectorAll('#form-steps .step__line');
+
+    /* --- Navigate to a specific step --- */
+    function goToStep(targetIndex) {
+      // Hide all steps
+      formSteps.forEach(function (s) { s.classList.remove('active'); });
+      // Show target
+      if (formSteps[targetIndex]) formSteps[targetIndex].classList.add('active');
+
+      // Update step indicators
+      stepIndicators.forEach(function (ind, i) {
+        ind.classList.remove('step--active', 'step--complete');
+        if (i < targetIndex) {
+          ind.classList.add('step--complete');
+        } else if (i === targetIndex) {
+          ind.classList.add('step--active');
+        }
+      });
+
+      // Scroll to top of form area
+      var formTop = form.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: formTop, behavior: 'smooth' });
+
+      // If navigating to review step, populate summary
+      if (targetIndex === 3) {
+        populateReview();
+      }
+    }
+
+    /* --- Next / Prev button handlers --- */
+    document.querySelectorAll('[data-next-step]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var nextIndex = parseInt(this.getAttribute('data-next-step'));
+        var currentIndex = nextIndex - 1;
+
+        // Basic validation for required fields in current step
+        if (formSteps[currentIndex]) {
+          var requiredFields = formSteps[currentIndex].querySelectorAll('[required]');
+          var valid = true;
+          requiredFields.forEach(function (field) {
+            if (!field.value || field.value.trim() === '') {
+              field.classList.add('error');
+              valid = false;
+            } else {
+              field.classList.remove('error');
+            }
+          });
+          if (!valid) {
+            // Find first invalid field and focus it
+            var firstInvalid = formSteps[currentIndex].querySelector('.error');
+            if (firstInvalid) firstInvalid.focus();
+            return;
+          }
+        }
+
+        goToStep(nextIndex);
+      });
+    });
+
+    document.querySelectorAll('[data-prev-step]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var prevIndex = parseInt(this.getAttribute('data-prev-step'));
+        goToStep(prevIndex);
+      });
+    });
+
+    /* --- Edit buttons on review step --- */
+    document.querySelectorAll('[data-goto-step]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var targetIndex = parseInt(this.getAttribute('data-goto-step'));
+        goToStep(targetIndex);
+      });
+    });
+
+    /* --- Populate review summary --- */
+    function populateReview() {
+      // About You
+      setText('review-name', getVal('full-name'));
+      setText('review-email', getVal('email'));
+      setText('review-phone', getVal('phone') || 'Not provided');
+      setText('review-country', getSelectedText('country'));
+      setText('review-referral', getSelectedText('referral-source') || 'Not provided');
+
+      // Your Condition
+      var symptoms = getCheckedLabels('symptoms[]');
+      setText('review-symptoms', symptoms.length > 0 ? symptoms.join(', ') : 'None selected');
+      setText('review-duration', getSelectedText('symptom-duration'));
+      setText('review-diagnosis', getVal('current-diagnosis') || 'Not provided');
+      setText('review-testing', getSelectedText('lyme-testing'));
+
+      // Treatment History
+      var treatments = getCheckedLabels('treatments_tried[]');
+      setText('review-treatments', treatments.length > 0 ? treatments.join(', ') : 'Not provided');
+      setText('review-medications', truncate(getVal('current-medications'), 120) || 'Not provided');
+      setText('review-other-conditions', truncate(getVal('other-conditions'), 120) || 'Not provided');
+      setText('review-outcome', truncate(getVal('hoped-outcome'), 120) || 'Not provided');
+    }
+
+    function getVal(id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
+
+    function getSelectedText(id) {
+      var el = document.getElementById(id);
+      if (!el || el.selectedIndex < 0) return '';
+      var opt = el.options[el.selectedIndex];
+      return opt && opt.value ? opt.text : '';
+    }
+
+    function getCheckedLabels(name) {
+      var labels = [];
+      document.querySelectorAll('input[name="' + name + '"]:checked').forEach(function (cb) {
+        var label = cb.closest('label');
+        if (label) {
+          // Get the text content excluding the input element
+          var text = label.textContent.trim();
+          labels.push(text);
+        }
+      });
+      return labels;
+    }
+
+    function setText(id, value) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = value || '\u2014';
+    }
+
+    function truncate(str, max) {
+      if (!str) return '';
+      return str.length > max ? str.substring(0, max) + '...' : str;
+    }
+
+    /* --- Form submission --- */
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Validate consent
+        var consent = document.getElementById('consent-review');
+        if (!consent || !consent.checked) {
+          consent.closest('.consent-item').style.outline = '2px solid var(--color-error)';
+          consent.focus();
+          return;
+        }
+
+        var submitBtn = document.getElementById('submit-btn');
+        submitBtn.textContent = 'Submitting...';
+        submitBtn.disabled = true;
+
+        // Simulate submission (replace with actual endpoint)
+        setTimeout(function () {
+          // Replace form with success message
+          form.innerHTML = '<div style="text-align: center; padding: var(--space-8) 0;">' +
+            '<div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-primary-light); color: var(--color-primary); font-size: 28px; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-5);">&check;</div>' +
+            '<h2 style="margin-bottom: var(--space-3);">Your case review has been submitted</h2>' +
+            '<p style="max-width: 480px; margin: 0 auto var(--space-5); font-size: 17px; line-height: 1.6; color: var(--color-slate);">Thank you for trusting us with your information. Our medical team will review your case and respond to your email within 2 business days.</p>' +
+            '<p style="font-family: var(--font-ui); font-size: 14px; color: var(--color-pewter);">Please check your inbox (and spam folder) for a confirmation email.</p>' +
+            '<div style="margin-top: var(--space-6);"><a href="/" class="btn btn--secondary">Return to homepage</a></div>' +
+            '</div>';
+
+          // Hide step indicator
+          var stepsEl = document.getElementById('form-steps');
+          if (stepsEl) stepsEl.style.display = 'none';
+
+          // Scroll to top of form area
+          window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+        }, 1500);
+      });
+    }
+
+    /* --- Remove error class on input --- */
+    document.querySelectorAll('.form-input, .form-select').forEach(function (el) {
+      el.addEventListener('input', function () {
+        this.classList.remove('error');
+      });
+      el.addEventListener('change', function () {
+        this.classList.remove('error');
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>

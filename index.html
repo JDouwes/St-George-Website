@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyme Treatment Germany</title>
+<meta name="description" content="You have been searching long enough. Advanced Lyme disease treatment in Germany — whole-body hyperthermia, integrative protocols, and 30 years of caring for patients like you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- 10. JSON-LD SCHEMA — MedicalWebPage, MedicalClinic, FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Lyme Treatment Germany",
+  "description": "Advanced Lyme disease treatment in Germany — whole-body hyperthermia, integrative protocols, and 30 years of caring for patients.",
+  "url": "https://www.lyme-treatment-germany.com/",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Lyme Disease",
+    "alternateName": "Lyme Borreliosis"
+  },
+  "mainEntity": {
+    "@type": "MedicalClinic",
+    "name": "Klinik St. Georg",
+    "alternateName": "St. George Hospital",
+    "url": "https://www.klinik-st-georg.de",
+    "telephone": "+49-8061-398-0",
+    "foundingDate": "1991",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rosenheimer Str. 6-8",
+      "addressLocality": "Bad Aibling",
+      "postalCode": "83043",
+      "addressRegion": "Bavaria",
+      "addressCountry": "DE"
+    },
+    "medicalSpecialty": "Integrative Medicine",
+    "availableService": {
+      "@type": "MedicalTherapy",
+      "name": "Whole-Body Hyperthermia for Lyme Disease"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is whole-body hyperthermia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gentle medical procedure that raises your core temperature to 41.6-41.8°C under sedation. At this temperature, Borrelia bacteria become structurally unstable. You are monitored continuously in a hospital setting. We have performed this procedure over 30,000 times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this cure my Lyme disease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are honest about this: many patients experience significant improvement. Some achieve full symptom resolution. Some improve partially. And some do not respond as we hope. What we can promise is that we will be transparent about what our experience shows — and what we do not yet fully understand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will I need to stay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical treatment program is 2-3 weeks. This includes comprehensive diagnostics, hyperthermia sessions, antimicrobial support, and integrative therapies. The exact plan is tailored to you after your consultation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does treatment cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every program is different. We provide a detailed, transparent cost estimate after your initial consultation — before you make any commitment. We also help with insurance documentation for reimbursement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is behind this website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The medical team at Klinik St. Georg (St. George Hospital) in Bad Aibling, Germany. All clinical content is written and reviewed by our physicians. We disclose this openly because we believe trust begins with transparency."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+/*
+  LYME TREATMENT GERMANY — The warm rebuild
+
+  Feeling: A loving mother who gives you a hug
+  after a long bad day of school.
+
+  Warm serif headlines. Soft earth tones.
+  Rounded edges. Generous padding.
+  Photography brought to the foreground.
+  Copy that validates before it informs.
+  Every section says: "We see you. Come rest."
+*/
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:#3d3d3d;background:#fffcf8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+:root{
+  --warm-black:#2c2a27;
+  --text:#4a4742;
+  --text-light:#7a756d;
+  --text-faint:#a8a299;
+  --border:#e8e2d9;
+  --cream:#fffcf8;
+  --sand:#f7f3ed;
+  --sand-dark:#efe9e0;
+  --teal:#2b7a68;
+  --teal-deep:#1e5e50;
+  --teal-soft:#e6f2ee;
+  --teal-glow:#d4ebe4;
+  --copper:#b07a3d;
+  --copper-soft:#f5ead8;
+  --white:#ffffff;
+}
+
+/* --- 11. SKIP LINK (Accessibility) --- */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;font-size:14px;padding:12px 24px;background:var(--teal);color:#fff;border-radius:0 0 8px 0}
+.skip-link:focus{position:fixed;left:0;top:0;width:auto;height:auto;overflow:visible}
+
+/* --- Typography: Lora for soul, DM Sans for structure --- */
+.h-hero{font-family:'Lora',Georgia,serif;font-size:clamp(40px,6vw,76px);font-weight:400;line-height:1.12;letter-spacing:-0.02em;color:var(--white)}
+.h-lg{font-family:'Lora',Georgia,serif;font-size:clamp(32px,4vw,52px);font-weight:400;line-height:1.15;letter-spacing:-0.015em;color:var(--warm-black)}
+.h-md{font-family:'Lora',Georgia,serif;font-size:clamp(26px,2.8vw,38px);font-weight:400;line-height:1.2;letter-spacing:-0.01em;color:var(--warm-black)}
+.h-sm{font-family:'Lora',Georgia,serif;font-size:clamp(20px,1.8vw,26px);font-weight:500;line-height:1.3;color:var(--warm-black)}
+.body-lg{font-size:clamp(17px,1.2vw,20px);line-height:1.7;color:var(--text-light)}
+.body-md{font-size:17px;line-height:1.7;color:var(--text-light)}
+.body-sm{font-size:15px;line-height:1.65;color:var(--text-light)}
+.eyebrow{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--teal)}
+
+/* --- Layout --- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.wrap--narrow{max-width:720px}
+.wrap--wide{max-width:1240px}
+.center{text-align:center}
+
+/* --- Buttons: Warm, rounded, inviting --- */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;padding:16px 36px;border-radius:60px;transition:all 0.3s ease}
+.btn--warm{background:var(--teal);color:#fff}
+.btn--warm:hover{background:var(--teal-deep);transform:translateY(-1px);box-shadow:0 8px 24px rgba(43,122,104,0.2)}
+.btn--soft{background:var(--white);color:var(--warm-black);box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.btn--soft:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);transform:translateY(-1px)}
+/* 1. CTA — btn--gentle upgraded to solid for "Check your symptoms" visual equality */
+.btn--gentle{background:var(--white);color:var(--warm-black);box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.btn--gentle:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);transform:translateY(-1px)}
+.btn--outline{background:transparent;color:var(--teal);border:1.5px solid var(--border)}
+.btn--outline:hover{border-color:var(--teal);background:var(--teal-soft)}
+.btn-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn-row--center{justify-content:center}
+
+.link{color:var(--teal);font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:gap 0.2s}
+.link:hover{gap:10px}
+
+/* --- Header --- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background 0.4s,box-shadow 0.4s,transform 0.35s}
+/* Homepage transparent state — invisible over hero */
+header.hero-mode{background:transparent;box-shadow:none}
+header.hero-mode .nav-links a{color:#fff;opacity:0.85}
+header.hero-mode .nav-links a:hover{opacity:1}
+header.hero-mode .nav-cta{background:rgba(255,255,255,0.18);color:#fff;border:1.5px solid rgba(255,255,255,0.45);backdrop-filter:blur(4px)}
+header.hero-mode .nav-cta:hover{background:rgba(255,255,255,0.3)}
+header.hero-mode .menu-btn span{background:#fff}
+/* logo swap: show white logo in hero-mode, teal logo otherwise */
+header.hero-mode .logo-teal{display:none}
+header.hero-mode .logo-white{display:flex}
+header:not(.hero-mode) .logo-teal{display:flex}
+header:not(.hero-mode) .logo-white{display:none}
+header.scrolled{background:rgba(255,252,248,0.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 1px 0 var(--border)}
+header.hide{transform:translateY(-100%)}
+header nav{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:72px}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img,.logo svg{height:56px;width:auto}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:14px;color:var(--text);opacity:0.75;transition:opacity 0.2s,color 0.3s}
+.nav-links a:hover{opacity:1}
+.nav-cta{font-size:14px;font-weight:600;background:var(--teal);color:#fff;padding:9px 22px;border-radius:60px;opacity:1 !important;transition:background 0.2s,color 0.3s,border-color 0.3s;border:1.5px solid transparent;letter-spacing:0.01em}
+.nav-cta:hover{background:var(--teal-deep)}
+.menu-btn{display:none;width:36px;height:36px;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu-btn span{display:block;width:18px;height:1.5px;background:var(--warm-black);border-radius:2px;transition:background 0.3s}
+
+/* ==============================================
+   HERO — The hug. Warm forest. Soft light.
+   "You've been searching. We're here."
+   ============================================== */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 32px 80px;position:relative;overflow:hidden}
+.hero__img{position:absolute;inset:0;background:url('assets/images/hero-forest.jpg') center 40%/cover no-repeat}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,40,30,0.15) 0%,rgba(30,40,30,0.1) 30%,rgba(30,40,30,0.45) 65%,rgba(30,40,30,0.75) 100%)}
+.hero__inner{position:relative;z-index:1;max-width:680px}
+.hero__kicker{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);letter-spacing:0.03em;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero__kicker::before{content:'';width:24px;height:1px;background:rgba(255,255,255,0.4)}
+.hero__title{margin-bottom:24px}
+.hero__body{font-family:'Lora',serif;font-size:clamp(17px,1.3vw,20px);line-height:1.7;color:rgba(255,255,255,0.8);max-width:520px;margin-bottom:40px}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap}
+/* 1. CTA — Hero microcopy styling */
+.hero__microcopy{font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.55);line-height:1.5;margin-top:14px;max-width:360px}
+
+/* Animations */
+.hero__kicker,.hero__title,.hero__body,.hero__actions,.hero__microcopy{opacity:0;animation:rise 1s ease forwards}
+.hero__kicker{animation-delay:0.15s}
+.hero__title{animation-delay:0.35s}
+.hero__body{animation-delay:0.55s}
+.hero__actions{animation-delay:0.75s}
+.hero__microcopy{animation-delay:0.85s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ==============================================
+   2. WELCOME BAND — Now narrative, not tiles
+   ============================================== */
+.welcome{background:var(--sand);padding:56px 0;border-bottom:1px solid var(--border)}
+.welcome__narrative{max-width:760px;margin:0 auto;text-align:center;padding:0 32px;font-family:'Lora',serif;font-size:clamp(17px,1.3vw,20px);line-height:1.8;color:var(--text)}
+
+/* ==============================================
+   EMPATHY SECTION — "We understand"
+   The emotional core of the page.
+   ============================================== */
+.empathy{padding:100px 0;background:var(--cream)}
+.empathy__inner{max-width:700px;margin:0 auto;text-align:center;padding:0 32px}
+.empathy__title{margin-bottom:28px}
+.empathy__text{font-family:'Lora',serif;font-size:clamp(17px,1.2vw,19px);line-height:1.8;color:var(--text);margin-bottom:16px}
+.empathy__text:last-of-type{margin-bottom:32px}
+
+/* ==============================================
+   3. MEET YOUR DOCTORS — Doctor cards
+   ============================================== */
+.doctors-section{padding:80px 0;background:var(--sand)}
+.doctors-grid{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;max-width:960px;margin:0 auto;padding:0 32px}
+.doctor-card{text-align:center;max-width:240px}
+.doctor-card__photo{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 20px;border:3px solid var(--border);box-shadow:0 4px 16px rgba(0,0,0,0.06)}
+.doctor-card__photo img{width:100%;height:100%;object-fit:cover;display:block}
+.doctor-card__name{font-family:'Lora',serif;font-size:18px;font-weight:500;color:var(--warm-black);margin-bottom:4px}
+.doctor-card__title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:var(--teal);letter-spacing:0.02em;margin-bottom:10px}
+.doctor-card__bio{font-size:14px;line-height:1.6;color:var(--text-light)}
+
+/* ==============================================
+   6. TRUST CREDENTIAL BAR
+   ============================================== */
+.trust-bar{padding:28px 0;background:var(--sand-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trust-bar__inner{max-width:960px;margin:0 auto;text-align:center;padding:0 32px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-faint);letter-spacing:0.01em;line-height:1.6}
+
+/* ==============================================
+   5. BRIDGE SENTENCE
+   ============================================== */
+.bridge{padding:56px 0;background:var(--cream);text-align:center}
+.bridge__text{font-family:'Lora',serif;font-style:italic;font-size:clamp(17px,1.2vw,20px);color:var(--text-light);max-width:480px;margin:0 auto;padding:0 32px;line-height:1.7}
+
+/* ==============================================
+   FEATURE SPLIT — Photo + text
+   Rounded corners, warm tones
+   ============================================== */
+.split{padding:80px 0}
+.split__inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1140px;margin:0 auto;padding:0 32px}
+.split--reverse .split__photo{order:2}
+.split--reverse .split__text{order:1}
+.split__photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.split__photo img{width:100%;height:100%;object-fit:cover;display:block}
+.split__photo--tall{aspect-ratio:3/4}
+.split__text .eyebrow{margin-bottom:14px}
+.split__text .h-md{margin-bottom:18px}
+.split__text .body-md{margin-bottom:28px}
+
+/* ==============================================
+   CARDS — Warm, rounded, with subtle bg
+   ============================================== */
+.card-section{padding:80px 0;background:var(--sand)}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1140px;margin:0 auto;padding:0 32px}
+.card{background:var(--white);border-radius:20px;padding:40px 32px;border:1px solid var(--border);transition:border-color 0.3s,box-shadow 0.3s}
+.card:hover{border-color:var(--teal-glow);box-shadow:0 8px 32px rgba(43,122,104,0.08)}
+.card .eyebrow{margin-bottom:16px}
+.card__title{font-family:'Lora',serif;font-size:22px;font-weight:500;color:var(--warm-black);margin-bottom:12px;line-height:1.25}
+.card__text{font-size:15px;line-height:1.65;color:var(--text-light);margin-bottom:24px}
+
+/* ==============================================
+   4. TESTIMONIALS — Multiple patient quotes
+   ============================================== */
+.testimonials-section{padding:80px 0;background:var(--sand)}
+.testimonials-grid{max-width:900px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:32px}
+.testimonial-card{background:var(--white);border-radius:16px;padding:36px 40px;border:1px solid var(--border)}
+.testimonial-card__quote{font-family:'Lora',serif;font-size:clamp(16px,1.1vw,18px);font-style:italic;line-height:1.7;color:var(--warm-black);margin-bottom:16px}
+.testimonial-card__quote::before{content:'\201C';font-family:'Lora',serif;font-size:32px;color:var(--teal);opacity:0.4;line-height:0;vertical-align:-8px;margin-right:4px}
+.testimonial-card__attr{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text-faint)}
+.testimonials-disclaimer{text-align:center;font-size:12px;color:var(--text-faint);margin-top:28px;padding:0 32px}
+
+/* ==============================================
+   QUOTE — Warm teal background, big serif italic
+   (kept for structural compatibility, not used on homepage now)
+   ============================================== */
+.quote-section{padding:80px 0;background:var(--teal-soft)}
+.quote-inner{max-width:740px;margin:0 auto;text-align:center;padding:0 32px}
+.quote-mark{font-family:'Lora',serif;font-size:64px;color:var(--teal);line-height:1;margin-bottom:-16px;opacity:0.3}
+.quote-text{font-family:'Lora',serif;font-size:clamp(20px,2.5vw,30px);font-weight:400;font-style:italic;line-height:1.5;color:var(--warm-black);margin-bottom:24px}
+.quote-attr{font-size:15px;color:var(--text-light)}
+.quote-note{font-size:12px;color:var(--text-faint);margin-top:16px}
+
+/* ==============================================
+   JOURNEY — Warm dark, not cold dark
+   ============================================== */
+.journey-section{background:var(--teal-deep);padding:80px 0;color:#fff}
+.journey-section .h-md{color:#fff;margin-bottom:48px}
+.journey-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;max-width:1080px;margin:0 auto;padding:0 32px}
+.step{text-align:center}
+.step__num{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Lora',serif;font-size:20px;color:rgba(255,255,255,0.8);transition:all 0.3s}
+.step:hover .step__num{border-color:var(--copper);background:rgba(176,122,61,0.15)}
+.step__title{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px}
+.step__text{font-size:14px;line-height:1.6;color:rgba(255,255,255,0.72)}
+
+/* ==============================================
+   CTA SECTION — Warm, inviting, soft bg
+   ============================================== */
+.cta-warm{padding:80px 0;background:var(--sand)}
+.cta-dark{padding:100px 0;background:var(--teal-deep);color:#fff;text-align:center}
+.cta-dark .h-lg{color:#fff;margin-bottom:20px}
+.cta-dark .body-lg{color:rgba(255,255,255,0.65);max-width:480px;margin:0 auto 36px}
+/* 12. Warmer close line */
+.cta-dark__warmclose{font-family:'Lora',serif;font-style:italic;font-size:16px;color:rgba(255,255,255,0.45);margin-top:24px}
+
+/* ==============================================
+   INTERNATIONAL — Country pills
+   ============================================== */
+.countries{display:flex;gap:12px;flex-wrap:wrap}
+.countries a{font-size:15px;font-weight:500;padding:11px 24px;border-radius:60px;border:1.5px solid var(--border);color:var(--text);transition:all 0.25s}
+.countries a:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-soft)}
+
+/* ==============================================
+   FAQ — Warm, gentle
+   ============================================== */
+.faq-section{padding:80px 0;background:var(--cream)}
+.faq{max-width:680px;margin:0 auto}
+.faq__item{border-bottom:1px solid var(--border)}
+.faq__q{display:flex;justify-content:space-between;align-items:center;width:100%;padding:22px 0;font-family:'Lora',serif;font-size:18px;font-weight:400;color:var(--warm-black);text-align:left;gap:16px}
+.faq__q::after{content:'+';font-family:'DM Sans',sans-serif;font-size:22px;font-weight:300;color:var(--text-faint);transition:transform 0.3s}
+.faq__item.open .faq__q::after{transform:rotate(45deg);color:var(--teal)}
+.faq__a{overflow:hidden;max-height:0;transition:max-height 0.4s ease}
+.faq__a-inner{padding:0 0 22px;font-size:16px;line-height:1.7;color:var(--text-light)}
+.faq__a-inner a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+
+/* ==============================================
+   FOOTER — Warm gray, gentle
+   ============================================== */
+footer{background:var(--sand);padding:56px 0 28px;border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer h6{font-family:'Lora',serif;font-size:15px;font-weight:500;color:var(--warm-black);margin-bottom:14px}
+footer p{font-size:14px;line-height:1.6;color:var(--text-light);max-width:280px}
+footer a{display:block;font-size:14px;color:var(--text-light);padding:3px 0;transition:color 0.15s}
+footer a:hover{color:var(--teal)}
+.footer-disclosure{font-size:13px;line-height:1.6;color:var(--text-light);border-top:1px solid var(--border);padding-top:20px;max-width:600px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:12px;color:var(--text-faint)}
+.footer-bottom a{display:inline;padding:0;margin-left:20px}
+
+/* ==============================================
+   7. STICKY MOBILE CTA BAR
+   ============================================== */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:99;background:var(--white);padding:12px 20px;box-shadow:0 -2px 12px rgba(0,0,0,0.08);text-align:center;transform:translateY(100%);transition:transform 0.35s ease}
+.sticky-cta.visible{transform:translateY(0)}
+.sticky-cta .btn{width:100%;max-width:340px;padding:14px 32px;font-size:15px}
+
+/* --- Focus visible --- */
+*:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+
+/* --- Scroll reveal (progressive: visible by default, animated only with JS + motion OK) --- */
+.reveal{transition:opacity 0.8s ease,transform 0.8s ease}
+.js-reveal .reveal:not(.in){opacity:0;transform:translateY(24px)}
+.reveal.in{opacity:1;transform:none}
+
+/* --- Responsive --- */
+@media(max-width:960px){
+  .split__inner{grid-template-columns:1fr;gap:32px}
+  .split--reverse .split__photo{order:0}
+  .split--reverse .split__text{order:0}
+  .card-grid{grid-template-columns:1fr}
+  .journey-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:var(--cream);padding:20px 32px;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.06);gap:4px}
+  .nav-links.nav-open{display:flex}
+  .nav-links a{padding:10px 0;font-size:16px}
+  .nav-cta{align-self:flex-start;margin-top:8px}
+  .menu-btn{display:flex}
+  .doctors-grid{gap:36px}
+  /* 7. Show sticky CTA bar on mobile */
+  .sticky-cta{display:block}
+}
+@media(max-width:640px){
+  .hero{padding:0 20px 60px}
+  .h-hero{font-size:36px}
+  .hero__actions{flex-direction:column;width:100%;max-width:300px}
+  .hero__actions .btn{width:100%;justify-content:center}
+  .journey-grid{grid-template-columns:1fr}
+  .countries{flex-direction:column;max-width:260px}
+  .countries a{text-align:center}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+  .empathy,.split,.card-section,.quote-section,.journey-section,.faq-section,.cta-warm,.cta-dark,.doctors-section,.testimonials-section{padding:60px 0}
+  .doctors-grid{flex-direction:column;align-items:center;gap:32px}
+  .testimonial-card{padding:28px 24px}
+  /* 8. HERO CONTRAST — Darker overlay on mobile */
+  .hero__overlay{background:linear-gradient(to bottom,rgba(30,40,30,0.4) 0%,rgba(30,40,30,0.45) 30%,rgba(30,40,30,0.65) 65%,rgba(30,40,30,0.8) 100%)}
+  /* 8. Both hero buttons solid on mobile */
+  .hero__actions .btn--gentle{background:var(--white);color:var(--warm-black);border:none;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero__kicker,.hero__title,.hero__body,.hero__actions,.hero__microcopy{opacity:1;animation:none}
+  .sticky-cta{transition:none}
+}
+</style>
+</head>
+<body class="page-home">
+
+<!-- 11. ACCESSIBILITY — Skip link as first element in body -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- HEADER -->
+<header>
+  <nav aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Lyme Treatment Germany — Home">
+      <!-- Teal logo: shown on scrolled/normal header -->
+      <svg class="logo-teal" width="280" height="64" viewBox="0 0 320 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <g transform="translate(34,36)">
+          <path d="M0,-28 L20,-20 L20,2 C20,16 10,26 0,30 C-10,26 -20,16 -20,2 L-20,-20 Z" fill="#2b7a68" opacity="0.1"/>
+          <path d="M0,-28 L20,-20 L20,2 C20,16 10,26 0,30 C-10,26 -20,16 -20,2 L-20,-20 Z" fill="none" stroke="#2b7a68" stroke-width="1.6"/>
+          <path d="M0,-12 C8,-8 12,-2 10,4 C8,10 4,12 0,12 C-4,12 -8,10 -10,4 C-12,-2 -8,-8 0,-12 Z" fill="#2b7a68" opacity="0.25"/>
+          <line x1="0" y1="-12" x2="0" y2="12" stroke="#2b7a68" stroke-width="0.8" opacity="0.4"/>
+          <line x1="0" y1="-2" x2="6" y2="2" stroke="#2b7a68" stroke-width="0.6" opacity="0.4"/>
+          <line x1="0" y1="5" x2="6" y2="8" stroke="#2b7a68" stroke-width="0.6" opacity="0.4"/>
+        </g>
+        <text x="68" y="30" font-family="Lora, Georgia, serif" font-size="19" font-weight="700" fill="#2b7a68">Lyme Treatment</text>
+        <text x="68" y="50" font-family="Lora, Georgia, serif" font-size="10" font-weight="400" fill="#2b7a68" letter-spacing="3.5">GERMANY</text>
+      </svg>
+      <!-- White logo: shown over hero (transparent header) -->
+      <svg class="logo-white" width="280" height="64" viewBox="0 0 320 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <g transform="translate(34,36)">
+          <path d="M0,-28 L20,-20 L20,2 C20,16 10,26 0,30 C-10,26 -20,16 -20,2 L-20,-20 Z" fill="rgba(255,255,255,0.15)"/>
+          <path d="M0,-28 L20,-20 L20,2 C20,16 10,26 0,30 C-10,26 -20,16 -20,2 L-20,-20 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.6"/>
+          <path d="M0,-12 C8,-8 12,-2 10,4 C8,10 4,12 0,12 C-4,12 -8,10 -10,4 C-12,-2 -8,-8 0,-12 Z" fill="rgba(255,255,255,0.35)"/>
+          <line x1="0" y1="-12" x2="0" y2="12" stroke="rgba(255,255,255,0.6)" stroke-width="0.8"/>
+          <line x1="0" y1="-2" x2="6" y2="2" stroke="rgba(255,255,255,0.5)" stroke-width="0.6"/>
+          <line x1="0" y1="5" x2="6" y2="8" stroke="rgba(255,255,255,0.5)" stroke-width="0.6"/>
+        </g>
+        <text x="68" y="30" font-family="Lora, Georgia, serif" font-size="19" font-weight="700" fill="#ffffff">Lyme Treatment</text>
+        <text x="68" y="50" font-family="Lora, Georgia, serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.8)" letter-spacing="3.5">GERMANY</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="/lyme-disease-symptoms/">Symptoms</a>
+      <a href="/hyperthermia-lyme-disease/">Hyperthermia</a>
+      <a href="/compare-treatments/">Compare</a>
+      <a href="/international-patients/">International</a>
+      <a href="/knowledge/">Knowledge</a>
+      <a href="/consultation/" class="nav-cta" aria-label="Book a consultation">Book consultation</a>
+    </div>
+    <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- 1. HERO — The forest. Warm light. Bottom-aligned text. "We're here." -->
+<section class="hero">
+  <div class="hero__img" aria-hidden="true"></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__kicker">Klinik St. Georg &middot; Bad Aibling, Germany</p>
+    <h1 class="h-hero hero__title">You have been<br>searching long enough.</h1>
+    <p class="hero__body">Advanced Lyme disease treatment, built on 30&nbsp;years of caring for patients just like you. Whole-body hyperthermia. Integrative medicine. A team that finally understands.</p>
+    <div class="hero__actions">
+      <a href="/consultation/" class="btn btn--soft" aria-label="Share your story with our medical team">Share your story</a>
+      <a href="/symptom-assessment/" class="btn btn--gentle" aria-label="Check your symptoms with our assessment tool">Check your symptoms</a>
+    </div>
+    <p class="hero__microcopy">No cost. No obligation. A real doctor reads your story within 48 hours.</p>
+  </div>
+</section>
+
+<!-- 2. WELCOME — Narrative sentence on warm sand, not stat tiles -->
+<div class="welcome reveal">
+  <div class="welcome__narrative">
+    Over three decades, we have welcomed more than <strong>12,000 Lyme patients</strong> from <strong>90+ countries</strong> and performed over <strong>30,000 hyperthermia sessions</strong> &mdash; each one a person who, like you, had been searching for answers.
+    <span style="display:block;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text-faint);margin-top:12px">Based on Klinik St. Georg patient records, 1994&ndash;2026</span>
+  </div>
+</div>
+
+<!-- 3. EMPATHY — "We understand what you have been through" -->
+<!-- 11. ACCESSIBILITY — id="main" and role="main" -->
+<section class="empathy reveal" id="main" role="main">
+  <div class="empathy__inner">
+    <p class="eyebrow">We understand</p>
+    <h2 class="h-lg empathy__title">You are not imagining it.<br>And you are not alone.</h2>
+    <!-- 9. EMPATHY TEXT — <strong> tags around key emotional phrases -->
+    <p class="empathy__text">If you have spent years searching for answers &mdash; cycling through doctors, trying treatments that promised relief but never delivered, being told that your tests are normal when you know something is wrong &mdash; we want you to know: <strong>we believe you</strong>.</p>
+    <p class="empathy__text">Thousands of patients have sat where you are sitting right now. Many of them found their way to us after years of being dismissed. They are <strong>not searching anymore</strong>.</p>
+    <a href="/knowledge/chronic-lyme-disease/" class="link" aria-label="Learn why some patients need a different approach">Why some patients need a different approach <span>&rarr;</span></a>
+  </div>
+</section>
+
+<!-- 3. MEET YOUR DOCTORS — After empathy, before hyperthermia -->
+<section class="doctors-section reveal">
+  <div class="wrap center" style="margin-bottom:48px">
+    <p class="eyebrow">Your medical team</p>
+    <h2 class="h-md">Meet your doctors</h2>
+  </div>
+  <div class="doctors-grid">
+    <div class="doctor-card">
+      <div class="doctor-card__photo">
+        <img src="assets/images/dr-julian-douwes.jpg" alt="Julian Douwes M.D., Chief Medical Officer" loading="lazy">
+      </div>
+      <div class="doctor-card__name">Julian Douwes M.D.</div>
+      <div class="doctor-card__title">Chief Medical Officer</div>
+      <p class="doctor-card__bio">Third-generation physician. Treated his first Lyme patient in 1994.</p>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-card__photo">
+        <img src="assets/images/dr-angelina-svircev.jpg" alt="Angelina Svircev M.D., Lyme Disease Specialist" loading="lazy">
+      </div>
+      <div class="doctor-card__name">Angelina Svircev M.D.</div>
+      <div class="doctor-card__title">Lyme Disease Specialist</div>
+      <p class="doctor-card__bio">Specializing in chronic Lyme and co-infection management.</p>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-card__photo">
+        <img src="assets/images/dr-gabriele-zabel.jpg" alt="Gabriele Zabel M.D., Attending Physician" loading="lazy">
+      </div>
+      <div class="doctor-card__name">Gabriele Zabel M.D.</div>
+      <div class="doctor-card__title">Attending Physician</div>
+      <p class="doctor-card__bio">Over 15 years of experience with integrative Lyme protocols.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. TRUST CREDENTIAL BAR — After doctors section -->
+<div class="trust-bar reveal">
+  <div class="trust-bar__inner">
+    Founded 1991 &middot; Hospital-grade inpatient facility &middot; 70 beds &middot; Published research in peer-reviewed journals &middot; Heckel HT3000 certified medical device
+  </div>
+</div>
+
+<!-- 5. BRIDGE SENTENCE — Transition from emotional to clinical content -->
+<div class="bridge reveal">
+  <p class="bridge__text">When you are ready, here is what care looks like here.</p>
+</div>
+
+<!-- 4. SPLIT — Hyperthermia (photo left, text right) -->
+<section class="split reveal">
+  <div class="split__inner">
+    <div class="split__photo">
+      <img src="assets/images/hyperthermia-beds.jpg" alt="Heckel whole-body hyperthermia treatment beds at Klinik St. Georg" loading="lazy">
+    </div>
+    <div class="split__text">
+      <p class="eyebrow">Core treatment</p>
+      <h2 class="h-md">Whole-body hyperthermia for Lyme disease</h2>
+      <p class="body-md">Your core temperature is gently raised to 41.6&ndash;41.8&deg;C under sedation, reaching the range where Borrelia bacteria become structurally unstable. This is not new. It is three decades and 30,000 sessions of careful, monitored clinical practice.</p>
+      <a href="/hyperthermia-lyme-disease/" class="link" aria-label="Learn how hyperthermia works for Lyme disease">How hyperthermia works <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CARDS — Treatment approaches -->
+<section class="card-section reveal">
+  <div class="wrap center" style="margin-bottom:40px">
+    <p class="eyebrow">Your treatment</p>
+    <h2 class="h-md">Integrative Lyme treatment &mdash; not a single intervention</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <p class="eyebrow">Protocols</p>
+      <h3 class="card__title">Integrative treatment</h3>
+      <p class="card__text">Hyperthermia works best as part of a coordinated program &mdash; targeted antimicrobials, immune support, IV laser therapy, apheresis, and detoxification. One team, one plan.</p>
+      <a href="/lyme-disease-treatment/integrative-approach/" class="link" aria-label="Explore our integrative approach">Explore our approach <span>&rarr;</span></a>
+    </div>
+    <div class="card">
+      <p class="eyebrow">Diagnostics</p>
+      <h3 class="card__title">Testing that listens</h3>
+      <p class="card__text">Standard tests miss things. Our diagnostics go deeper &mdash; identifying co-infections, immune patterns, and biomarkers that explain what others have missed.</p>
+      <a href="/knowledge/lyme-testing-diagnosis/" class="link" aria-label="Understanding Lyme diagnostics">Understanding diagnostics <span>&rarr;</span></a>
+    </div>
+    <div class="card">
+      <p class="eyebrow">Guidance</p>
+      <h3 class="card__title">Compare your options honestly</h3>
+      <p class="card__text">We publish clear, criteria-based comparisons between treatment approaches. No hidden agendas. Just the information you need to make the right decision for you.</p>
+      <a href="/compare-treatments/" class="link" aria-label="See treatment comparisons">See comparisons <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. SPLIT — Why Germany (reversed, with Alps photo) -->
+<section class="split split--reverse reveal">
+  <div class="split__inner">
+    <div class="split__photo">
+      <img src="assets/images/bad-aibling.jpg" alt="Bad Aibling, Bavaria — village with Bavarian Alps" loading="lazy">
+    </div>
+    <div class="split__text">
+      <p class="eyebrow">Why Germany</p>
+      <h2 class="h-md">Why Germany for Lyme disease treatment</h2>
+      <p class="body-md">Germany permits whole-body hyperthermia at therapeutic temperatures, H.E.L.P. apheresis, and photodynamic therapy as standard clinical practice. Not experimental. Not alternative. Established, hospital-based medicine in the Bavarian Alps.</p>
+      <a href="/compare-treatments/germany-vs-us/" class="link" aria-label="Compare Germany vs US treatment options">Germany vs. US treatment <span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. TESTIMONIALS — 5 real patient quotes, after "Why Germany" -->
+<section class="testimonials-section reveal">
+  <div class="wrap center" style="margin-bottom:40px">
+    <p class="eyebrow">Patient stories</p>
+    <h2 class="h-md">In their own words</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-card__quote">Thank you for helping me get my life back. Rarely does a day go by now where some thought of gratitude for my improved health doesn't enter my mind. I can do more than I've been able to do in close to a decade.</p>
+      <p class="testimonial-card__attr">Patient, United States, 2019</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-card__quote">It is exactly one year since I was discharged. I cannot thank you all enough for your care, and for giving me back my life. After 30 years of illness I am so much better and still improving every day.</p>
+      <p class="testimonial-card__attr">Patient, United States, 2025</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-card__quote">I have just given birth to our daughter. Without the tireless work put into my treatment and recovery, I would never have had the opportunity to be a mother. You not only gave me quality of life back &mdash; you made it possible to create life.</p>
+      <p class="testimonial-card__attr">Patient, United Kingdom, 2025</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-card__quote">This last Halloween marked 8 years of being free of Lyme. I was under 100 pounds, scary thin &mdash; and now I have a normal, healthy physique.</p>
+      <p class="testimonial-card__attr">Patient, United States, 2025</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-card__quote">The clinic healed me. I feel completely healthy, I exercise regularly and live a full life. I have moved to Singapore with my husband and daughter &mdash; it is like a new chapter.</p>
+      <p class="testimonial-card__attr">Patient, originally United Kingdom, 2026</p>
+    </div>
+    <div class="testimonial-card">
+      <p class="testimonial-card__quote">I did not get the full resolution I hoped for &mdash; my fatigue has improved but not disappeared. What I did get was the first medical team in nine years that was honest with me about what was realistic and what was not. That honesty meant more than any promise could have.</p>
+      <p class="testimonial-card__attr">Patient, United States, 2025</p>
+    </div>
+  </div>
+  <p class="testimonials-disclaimer">Real patient experiences. Individual results vary. Not all patients achieve full symptom resolution. Shared with permission.</p>
+</section>
+
+<!-- 8. JOURNEY — Warm dark teal -->
+<section class="journey-section reveal">
+  <div class="center">
+    <p class="eyebrow" style="color:var(--copper);margin-bottom:14px">Your path</p>
+    <h2 class="h-md" style="color:#fff;margin-bottom:12px">How we work with you</h2>
+    <p style="color:rgba(255,255,255,0.5);font-size:15px;margin-bottom:48px">Every case is different. Here is how we begin.</p>
+  </div>
+  <div class="journey-grid">
+    <div class="step">
+      <div class="step__num">1</div>
+      <div class="step__title">Share your story</div>
+      <p class="step__text">Tell us what you have been through. We review every case personally within 2 business days.</p>
+    </div>
+    <div class="step">
+      <div class="step__num">2</div>
+      <div class="step__title">Meet your doctor</div>
+      <p class="step__text">A video consultation with a Lyme specialist who has seen thousands of patients like you.</p>
+    </div>
+    <div class="step">
+      <div class="step__num">3</div>
+      <div class="step__title">Your treatment</div>
+      <p class="step__text">A personalized 2&ndash;3 week program at our hospital. Diagnostics, hyperthermia, and integrative care.</p>
+    </div>
+    <div class="step">
+      <div class="step__num">4</div>
+      <div class="step__title">Ongoing support</div>
+      <p class="step__text">We stay with you. Remote follow-up and coordination with your local doctors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. SCREENER — Warm, centered -->
+<section class="cta-warm center reveal">
+  <div class="wrap--narrow">
+    <p class="eyebrow">Symptom assessment</p>
+    <h2 class="h-lg" style="margin-bottom:16px">Could your symptoms<br>be Lyme disease?</h2>
+    <p class="body-lg" style="max-width:480px;margin:0 auto 32px">A gentle 3-minute assessment to help you understand your symptoms. Educational only &mdash; not a diagnosis.</p>
+    <a href="/symptom-assessment/" class="btn btn--warm" aria-label="Start the symptom assessment">Start the assessment</a>
+  </div>
+</section>
+
+<!-- 10. SPLIT — International (hospital exterior) -->
+<section class="split split--reverse reveal" style="background:var(--sand)">
+  <div class="split__inner">
+    <div class="split__photo">
+      <img src="assets/images/hospital-exterior.jpg" alt="Klinik St. Georg — Bavarian hospital with mountain backdrop" loading="lazy">
+    </div>
+    <div class="split__text">
+      <p class="eyebrow">International patients</p>
+      <h2 class="h-md">International Lyme disease patients from 90+&nbsp;countries</h2>
+      <p class="body-md" style="margin-bottom:24px">English-language support from your very first inquiry through treatment and follow-up. We help with travel, accommodation, and every detail in between.</p>
+      <div class="countries">
+        <a href="/international-patients/from-us/" aria-label="Information for patients from the United States">United States</a>
+        <a href="/international-patients/from-uk/" aria-label="Information for patients from the United Kingdom">United Kingdom</a>
+        <a href="/international-patients/from-canada/" aria-label="Information for patients from Canada">Canada</a>
+        <a href="/international-patients/from-australia/" aria-label="Information for patients from Australia">Australia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="faq-section reveal">
+  <div class="wrap">
+    <h2 class="h-md center" style="margin-bottom:40px">Lyme treatment questions</h2>
+    <div class="faq">
+      <div class="faq__item">
+        <button class="faq__q" aria-label="What is whole-body hyperthermia?" aria-expanded="false">What is whole-body hyperthermia?</button>
+        <div class="faq__a"><div class="faq__a-inner">A gentle medical procedure that raises your core temperature to 41.6&ndash;41.8&deg;C under sedation. At this temperature, Borrelia bacteria become structurally unstable. You are monitored continuously in a hospital setting. We have performed this procedure over 30,000 times.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-label="Will this cure my Lyme disease?" aria-expanded="false">Will this cure my Lyme disease?</button>
+        <div class="faq__a"><div class="faq__a-inner">We are honest about this: many patients experience significant improvement. Some achieve full symptom resolution. Some improve partially. And some do not respond as we hope. What we can promise is that we will be transparent about what our experience shows &mdash; and what we do not yet fully understand.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-label="How long will I need to stay?" aria-expanded="false">How long will I need to stay?</button>
+        <div class="faq__a"><div class="faq__a-inner">A typical treatment program is 2&ndash;3 weeks. This includes comprehensive diagnostics, hyperthermia sessions, antimicrobial support, and integrative therapies. The exact plan is tailored to you after your consultation.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-label="What does treatment cost?" aria-expanded="false">What does treatment cost?</button>
+        <div class="faq__a"><div class="faq__a-inner">Every program is different. We provide a detailed, transparent cost estimate after your initial consultation &mdash; before you make any commitment. We also help with insurance documentation for reimbursement.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" aria-label="Who is behind this website?" aria-expanded="false">Who is behind this website?</button>
+        <div class="faq__a"><div class="faq__a-inner">The medical team at Klinik St. Georg (St. George Hospital) in Bad Aibling, Germany. All clinical content is written and reviewed by our physicians. We disclose this openly because we believe trust begins with transparency. <a href="/about/partnership-disclosure/">Read our editorial policy</a>.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FINAL CTA — Warm dark, gentle, with warmer close -->
+<section class="cta-dark reveal">
+  <div class="wrap">
+    <h2 class="h-lg">You do not have to<br>keep searching.</h2>
+    <p class="body-lg">No commitment. No pressure. Just tell us your story and we will tell you honestly whether we can help.</p>
+    <div class="btn-row btn-row--center">
+      <a href="/consultation/" class="btn btn--soft" aria-label="Share your story with our medical team">Share your story</a>
+      <a href="/resources/lyme-treatment-guide/" class="btn btn--gentle" aria-label="Download our free Lyme treatment guide">Download free guide</a>
+    </div>
+    <p class="cta-dark__warmclose">Whatever you decide, we are here.</p>
+  </div>
+</section>
+
+<!-- 7. STICKY MOBILE CTA BAR -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a href="/consultation/" class="btn btn--warm" aria-label="Share your story with our medical team">Share your story</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap--wide">
+    <div class="footer-grid">
+      <div>
+        <h6>Lyme Treatment Germany</h6>
+        <p>An educational resource for patients researching advanced Lyme disease treatment. Built on 30&nbsp;years of clinical experience and genuine care.</p>
+      </div>
+      <div>
+        <h6>Treatment</h6>
+        <a href="/hyperthermia-lyme-disease/">Hyperthermia</a>
+        <a href="/lyme-disease-treatment/">Treatment options</a>
+        <a href="/compare-treatments/">Compare</a>
+        <a href="/lyme-disease-treatment/integrative-approach/">Integrative approach</a>
+      </div>
+      <div>
+        <h6>For patients</h6>
+        <a href="/symptom-assessment/">Symptom assessment</a>
+        <a href="/consultation/">Consultation</a>
+        <a href="/international-patients/">International patients</a>
+        <a href="/patient-journey/first-consultation/">Your first visit</a>
+      </div>
+      <div>
+        <h6>Learn more</h6>
+        <a href="/knowledge/">Knowledge base</a>
+        <a href="/lyme-disease-symptoms/">Symptoms guide</a>
+        <a href="/about/">About us</a>
+        <a href="/resources/lyme-treatment-guide/">Free guide</a>
+      </div>
+    </div>
+    <div class="footer-disclosure">Lyme Treatment Germany is created in partnership with Klinik St. Georg (St. George Hospital), Bad Aibling, Germany. All clinical content is physician-authored. <a href="/about/partnership-disclosure/" style="color:var(--teal)">Editorial policy</a>.</div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Lyme Treatment Germany</span>
+      <div><a href="/legal/medical-disclaimer/">Disclaimer</a><a href="/legal/privacy-policy/">Privacy</a><a href="/legal/impressum/">Impressum</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Progressive reveal: only animate if motion is OK
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('js-reveal');
+  }
+
+  // Mobile menu
+  var menuBtn=document.querySelector('.menu-btn');
+  var navLinks=document.querySelector('.nav-links');
+  if(menuBtn&&navLinks){
+    menuBtn.addEventListener('click',function(){
+      var open=navLinks.classList.toggle('nav-open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+  }
+
+  // Header scroll behavior — homepage gets transparent hero-mode until scroll
+  var h=document.querySelector('header'),ly=0;
+  var isHome=document.body.classList.contains('page-home');
+  if(isHome)h.classList.add('hero-mode');
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY;
+    if(isHome)h.classList.toggle('hero-mode',y<60);
+    h.classList.toggle('scrolled',y>60);
+    if(y>300)h.classList.toggle('hide',y>ly&&y-ly>4);
+    else h.classList.remove('hide');
+    ly=y;
+  },{passive:true});
+
+  // Scroll reveal (IntersectionObserver)
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // FAQ accordion
+  document.querySelectorAll('.faq__q').forEach(function(b){
+    b.addEventListener('click',function(){
+      var item=b.parentElement,a=item.querySelector('.faq__a'),open=item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq__item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq__a').style.maxHeight=null;
+        i.querySelector('.faq__q').setAttribute('aria-expanded','false');
+      });
+      if(!open){
+        item.classList.add('open');
+        a.style.maxHeight=a.scrollHeight+'px';
+        b.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // 7. STICKY MOBILE CTA — Show after scrolling past the hero
+  var stickyCta=document.getElementById('stickyCta');
+  if(stickyCta){
+    var heroHeight=window.innerHeight;
+    window.addEventListener('scroll',function(){
+      if(window.scrollY>heroHeight){
+        stickyCta.classList.add('visible');
+        stickyCta.setAttribute('aria-hidden','false');
+      }else{
+        stickyCta.classList.remove('visible');
+        stickyCta.setAttribute('aria-hidden','true');
+      }
+    },{passive:true});
+  }
+})();
+</script>
+</body>
+</html>
