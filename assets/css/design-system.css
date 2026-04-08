@@ -2,7 +2,7 @@
    LYME TREATMENT GERMANY — Design System
    Version: 1.0
    Brand: Forest Teal + Warm Stone
-   Fonts: DM Sans (headings/UI) + Lora (body)
+   Fonts: Lora (headings) + DM Sans (body/UI)
    ============================================================ */
 
 /* --- CSS Reset (minimal) --- */
@@ -16,23 +16,23 @@ ul, ol { list-style: none; }
 /* --- Design Tokens --- */
 :root {
   /* Primary */
-  --color-primary: #1A6B5A;
-  --color-primary-dark: #0F4A3E;
-  --color-primary-light: #E8F4F0;
+  --color-primary: #2b7a68;
+  --color-primary-dark: #1e5e50;
+  --color-primary-light: #e8f4f0;
 
   /* Secondary */
   --color-secondary: #8C7B6B;
   --color-secondary-dark: #5C4F43;
-  --color-secondary-light: #F0ECE6;
+  --color-secondary-light: #f7f3ed;
 
   /* Neutrals */
-  --color-charcoal: #2B2D2E;
-  --color-slate: #5A5F63;
-  --color-pewter: #8A9098;
-  --color-snow: #FAFBFA;
-  --color-surface: #F5F6F4;
-  --color-border: #E2E5E3;
-  --color-border-light: #EEF0EE;
+  --color-charcoal: #2c2a27;
+  --color-slate: #4a4742;
+  --color-pewter: #7a756d;
+  --color-snow: #fffcf8;
+  --color-surface: #f7f3ed;
+  --color-border: #e8e2d9;
+  --color-border-light: #f0ebe3;
   --color-white: #FFFFFF;
 
   /* Semantic */
@@ -42,11 +42,11 @@ ul, ol { list-style: none; }
   --color-info: #4A7FA5;
 
   /* Accent */
-  --color-copper: #B87333;
+  --color-copper: #b07a3d;
 
   /* Typography */
-  --font-heading: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-body: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-ui: 'DM Sans', system-ui, -apple-system, sans-serif;
 
   /* Spacing scale (8px base) */
@@ -287,6 +287,61 @@ small, .text-sm {
   font-weight: 400;
 }
 
+/* --- Template A Unified Header --- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 252, 248, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8e2d9;
+  padding: 0;
+  transition: transform 0.3s;
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header.hide {
+  transform: translateY(-100%);
+}
+
+.logo svg {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4742;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #2b7a68;
+}
+
+.nav-cta {
+  background: #2b7a68;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 60px;
+  font-size: 13px;
+}
+
 /* --- Navigation --- */
 .nav {
   display: flex;
@@ -385,7 +440,7 @@ small, .text-sm {
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
-  border-radius: var(--radius-md);
+  border-radius: 60px;
   transition: all var(--transition-base);
   min-width: 140px;
   cursor: pointer;
@@ -465,7 +520,7 @@ small, .text-sm {
 
 .card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(26, 107, 90, 0.3);
+  border-color: rgba(43, 122, 104, 0.3);
 }
 
 .card--featured {
@@ -807,7 +862,7 @@ small, .text-sm {
 .form-select:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(26, 107, 90, 0.12);
+  box-shadow: 0 0 0 3px rgba(43, 122, 104, 0.12);
 }
 
 .form-input.error {
@@ -1030,8 +1085,8 @@ small, .text-sm {
 
 /* --- Footer --- */
 .site-footer {
-  background: var(--color-primary-dark);
-  color: rgba(255, 255, 255, 0.8);
+  background: #f7f3ed;
+  color: var(--color-slate);
   padding: var(--space-9) 0 var(--space-6);
 }
 
@@ -1046,7 +1101,7 @@ small, .text-sm {
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 600;
-  color: var(--color-white);
+  color: #2c2a27;
   margin-bottom: var(--space-4);
 }
 
@@ -1060,21 +1115,21 @@ small, .text-sm {
   display: block;
   font-family: var(--font-ui);
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-pewter);
   text-decoration: none;
   padding: var(--space-1) 0;
   transition: color var(--transition-fast);
 }
 
 .site-footer__link:hover {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .site-footer__disclosure {
   font-size: 13px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-pewter);
+  border-top: 1px solid var(--color-border);
   padding-top: var(--space-5);
   max-width: 720px;
 }
@@ -1083,11 +1138,11 @@ small, .text-sm {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
   padding-top: var(--space-5);
   font-family: var(--font-ui);
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-pewter);
 }
 
 /* --- Disclaimer Box --- */
