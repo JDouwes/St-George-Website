@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Your Assessment Results | Lyme Treatment Germany</title>
+<meta name="description" content="Your Lyme symptom assessment results have been submitted. Check your email for your personalized report.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:#3d3d3d;background:#fffcf8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+:root{
+  --warm-black:#2c2a27;--text:#4a4742;--text-light:#7a756d;--text-faint:#a8a299;
+  --border:#e8e2d9;--cream:#fffcf8;--sand:#f7f3ed;--sand-dark:#efe9e0;
+  --teal:#2b7a68;--teal-deep:#1e5e50;--teal-soft:#e6f2ee;--teal-glow:#d4ebe4;
+  --copper:#b07a3d;--copper-soft:#f5ead8;--white:#ffffff;
+}
+
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,252,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:16px 0}
+.header__inner{max-width:1080px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+.header__logo{font-family:'Lora',serif;font-size:18px;font-weight:500;color:var(--teal)}
+
+.thank-you{padding:120px 0 80px;text-align:center}
+.thank-you .check-circle{width:72px;height:72px;border-radius:50%;background:var(--teal-soft);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.thank-you .check-circle svg{width:36px;height:36px;color:var(--teal)}
+.thank-you h1{font-family:'Lora',serif;font-size:clamp(28px,4vw,38px);font-weight:400;color:var(--warm-black);margin-bottom:12px}
+.thank-you .subtitle{font-size:17px;color:var(--text-light);line-height:1.7;max-width:520px;margin:0 auto 36px}
+
+.email-note{background:var(--teal-soft);border:1px solid var(--teal-glow);border-radius:12px;padding:24px;text-align:left;margin-bottom:40px}
+.email-note strong{color:var(--teal-deep);display:block;margin-bottom:4px}
+.email-note p{font-size:15px;color:var(--text);line-height:1.6}
+
+.cta-group{display:flex;flex-direction:column;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;padding:16px 36px;border-radius:60px;transition:all 0.3s ease;text-decoration:none}
+.btn--warm{background:var(--teal);color:#fff}
+.btn--warm:hover{background:var(--teal-deep);transform:translateY(-1px);box-shadow:0 8px 24px rgba(43,122,104,0.2)}
+.btn--outline{background:transparent;color:var(--teal);border:1.5px solid var(--border)}
+.btn--outline:hover{border-color:var(--teal);background:var(--teal-soft)}
+
+/* Kit Form Brand Overrides */
+.kit-form-wrapper{margin:48px 0;padding:40px 32px;background:var(--white);border:1.5px solid var(--teal);border-radius:12px;box-shadow:0 4px 24px rgba(43,122,104,0.08)}
+.kit-form-wrapper h3{font-family:'Lora',serif;font-size:22px;font-weight:400;color:var(--warm-black);margin-bottom:8px;text-align:center}
+.kit-form-wrapper .kit-desc{font-size:14px;color:var(--text-light);text-align:center;margin-bottom:24px;line-height:1.6}
+
+/* Override Kit embed form styles */
+.formkit-form[data-uid="f3ad573e00"]{background:transparent !important;border:none !important;padding:0 !important;max-width:100% !important}
+.formkit-form[data-uid="f3ad573e00"] .formkit-fields{display:flex !important;flex-direction:column !important;gap:12px !important}
+.formkit-form[data-uid="f3ad573e00"] input[type="email"],
+.formkit-form[data-uid="f3ad573e00"] input[type="text"]{
+  width:100% !important;padding:14px 18px !important;border:1.5px solid var(--border) !important;border-radius:8px !important;
+  font-family:'DM Sans',sans-serif !important;font-size:15px !important;color:var(--text) !important;background:var(--cream) !important;
+  transition:border-color 0.2s !important;outline:none !important;box-shadow:none !important
+}
+.formkit-form[data-uid="f3ad573e00"] input:focus{border-color:var(--teal) !important;box-shadow:0 0 0 3px rgba(43,122,104,0.12) !important}
+.formkit-form[data-uid="f3ad573e00"] input::placeholder{color:var(--text-faint) !important}
+.formkit-form[data-uid="f3ad573e00"] button[type="submit"],
+.formkit-form[data-uid="f3ad573e00"] .formkit-submit{
+  width:100% !important;padding:16px 32px !important;background:var(--teal) !important;color:#fff !important;
+  border:none !important;border-radius:60px !important;font-family:'DM Sans',sans-serif !important;
+  font-size:16px !important;font-weight:600 !important;cursor:pointer !important;transition:all 0.3s ease !important;
+  letter-spacing:0.01em !important
+}
+.formkit-form[data-uid="f3ad573e00"] button[type="submit"]:hover,
+.formkit-form[data-uid="f3ad573e00"] .formkit-submit:hover{
+  background:var(--teal-deep) !important;transform:translateY(-1px) !important;box-shadow:0 8px 24px rgba(43,122,104,0.2) !important
+}
+.formkit-form[data-uid="f3ad573e00"] .formkit-guarantee,
+.formkit-form[data-uid="f3ad573e00"] .formkit-powered-by{font-family:'DM Sans',sans-serif !important;font-size:12px !important;color:var(--text-faint) !important}
+.formkit-form[data-uid="f3ad573e00"] .formkit-alert-success{
+  background:var(--teal-soft) !important;color:var(--teal-deep) !important;border:1px solid var(--teal-glow) !important;
+  border-radius:8px !important;padding:16px !important;font-family:'DM Sans',sans-serif !important
+}
+
+.footer{border-top:1px solid var(--border);padding:32px 0;text-align:center;margin-top:60px}
+.footer p{font-size:13px;color:var(--text-faint)}
+.footer a{color:var(--teal);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo">Lyme Treatment Germany</a>
+    <a href="/pages/consultation.html" class="btn btn--warm" style="padding:10px 24px;font-size:14px">Request Consultation</a>
+  </div>
+</header>
+
+<main class="wrap thank-you">
+  <div class="check-circle">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+  </div>
+  <h1>Your Assessment Is Complete</h1>
+  <p class="subtitle">Thank you for completing the Lyme symptom assessment. Your personalized report is being prepared and will be sent to your email shortly.</p>
+
+  <div class="email-note">
+    <strong>Check your inbox</strong>
+    <p>Your detailed symptom report will arrive within a few minutes. If you don't see it, please check your spam or promotions folder. The email will come from Lyme Treatment Germany.</p>
+  </div>
+
+  <!-- Branded Kit Form Embed -->
+  <div class="kit-form-wrapper">
+    <h3>Stay Informed About Your Health</h3>
+    <p class="kit-desc">Receive educational updates about Lyme disease treatment, new research, and patient resources. No spam — unsubscribe anytime.</p>
+    <script async data-uid="f3ad573e00" src="https://julian-douwes.kit.com/f3ad573e00/index.js"></script>
+  </div>
+
+  <div class="cta-group">
+    <a href="/pages/consultation.html" class="btn btn--warm">Request a Free Case Review</a>
+    <a href="/" class="btn btn--outline">Return to Lyme Treatment Germany</a>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Lyme Treatment Germany &middot; In partnership with <a href="https://www.klinik-st-georg.de" target="_blank" rel="noopener">Klinik St. Georg</a>, Bad Aibling</p>
+  <p style="margin-top:8px"><a href="/pages/legal/privacy-policy.html">Privacy Policy</a> &middot; <a href="/pages/legal/medical-disclaimer.html">Medical Disclaimer</a> &middot; <a href="/pages/legal/impressum.html">Impressum</a></p>
+</footer>
+
+</body>
+</html>
